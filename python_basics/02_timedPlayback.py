@@ -45,7 +45,7 @@ def multiPlay(n):
             # play sample
             sample.play()
             # wait 1 second
-            time.sleep(sequence[randint(0, 3)])
+            time.sleep(sequence[randint(0, n)])
     n += 1
 
 #calls function
