@@ -1,5 +1,6 @@
 import simpleaudio as sa
 import time
+from random import randint
 
 """
 An example project in which three wav files are played after eachother with a
@@ -10,6 +11,7 @@ minor break in between.
   Write a function that plays the samples a given number of times.
   Use this function.
 
+CHECK
 
 - Alter the code:
   Change the time in between samples into a random value.
@@ -18,10 +20,15 @@ minor break in between.
          https://docs.python.org/2/library/random.html
          A standard package does not need to be installed with pip, but it does
          need to be imported.
+
+CHECK
 """
+
 #user input
 n = input("How much bro? ")
 n = int(n)
+
+sequence = [0.25, 0.5, 1]
 
 # load 3 audioFiles into a list
 samples = [ sa.WaveObject.from_wave_file("audioFiles/robo1.wav"),
@@ -38,7 +45,7 @@ def multiPlay(n):
             # play sample
             sample.play()
             # wait 1 second
-            time.sleep(1)
+            time.sleep(sequence[randint(0, 3)])
     n += 1
 
 #calls function
