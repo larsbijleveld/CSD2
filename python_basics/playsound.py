@@ -29,7 +29,7 @@ while (x < bpm):
     bpm = bpm - sequence[0]
     sequence.append(sequence[0])
     del(sequence[0])
-    wave_obj = sa.WaveObject.from_wave_file("noise1.wav")
+    wave_obj = sa.WaveObject.from_wave_file("../audioFiles/noise1.wav")
     play_obj = wave_obj.play()
     print(bpm)
 #if statement to reintiate loop with new bpm value
